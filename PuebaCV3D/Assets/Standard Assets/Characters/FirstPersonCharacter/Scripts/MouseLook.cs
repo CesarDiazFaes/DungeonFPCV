@@ -21,6 +21,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private Quaternion m_CameraTargetRot;
         private bool m_cursorIsLocked = true;
 
+
         public void Init(Transform character, Transform camera)
         {
             m_CharacterTargetRot = character.localRotation;
@@ -109,6 +110,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             q.x = Mathf.Tan (0.5f * Mathf.Deg2Rad * angleX);
 
             return q;
+        }
+
+        public void changeMouseXLook(float min, float max)
+        {
+            this.MinimumX = min;
+            this.MaximumX = max;
         }
 
     }
